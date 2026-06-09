@@ -1,0 +1,5 @@
+Projekt rozproszonego przetwarzania danych łączy kilka ważnych obszarów informatyki. Studenci ćwiczą programowanie współbieżne, komunikację między procesami, analizę wydajności oraz podstawy projektowania architektury. To sprawia, że zadanie ma wartość praktyczną i nie sprowadza się do jednego wąskiego zagadnienia. Podobne idee występują później w realnych systemach przetwarzających logi, dokumenty i dane telemetryczne.
+
+Ważne jest też podejście do pracy zespołowej. Jedna osoba może odpowiadać za koordynatora, druga za workery, a trzecia za testy i dokumentację. Taki podział ułatwia realizację projektu, choć wymaga dobrej komunikacji. Na końcu wszystkie elementy muszą tworzyć spójną całość. To cenna lekcja nie tylko programowania, ale też organizacji pracy.
+
+Najlepsze projekty zwykle nie są najbardziej skomplikowane. Najlepsze są te, które działają stabilnie, są czytelne i potrafią obronić swoje wyniki. Właśnie do takiego podejścia warto dążyć podczas realizacji zadania.

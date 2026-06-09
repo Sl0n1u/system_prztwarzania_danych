@@ -1,0 +1,5 @@
+W teorii większa liczba workerów powinna skracać czas wykonania programu. W praktyce nie zawsze tak się dzieje. Każdy dodatkowy proces generuje pewien narzut związany z uruchomieniem, synchronizacją i komunikacją. Gdy dane są małe, ten koszt może przewyższyć korzyści wynikające z równoległości.
+
+Projekt studencki ma właśnie pokazać takie zależności. Nie chodzi tylko o to, aby program uruchomił się na czterech workerach. Trzeba jeszcze sprawdzić, czy wynik rzeczywiście jest lepszy niż w wersji sekwencyjnej. Czasem dwa workery dają sensowne przyspieszenie, a kolejne nie wnoszą już dużej poprawy. Takie obserwacje są bardzo wartościowe.
+
+Skalowanie zależy od wielu czynników. Znaczenie ma liczba rdzeni procesora, szybkość dysku, system operacyjny i sposób podziału danych. Dlatego wyniki różnych zespołów mogą się od siebie różnić. Najważniejsze jest, aby umieć je poprawnie opisać i uzasadnić.

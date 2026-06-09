@@ -1,0 +1,5 @@
+W projektach inżynierskich liczy się nie tylko działający program, ale także jego czytelność. Kod powinien być uporządkowany, podzielony na logiczne moduły i opatrzony sensownymi nazwami. Dzięki temu łatwiej zrozumieć architekturę rozwiązania oraz wprowadzać poprawki. Dobra struktura projektu ułatwia również testowanie poszczególnych elementów systemu.
+
+Dokumentacja powinna opisywać najważniejsze decyzje projektowe. Student powinien wyjaśnić, jaki mechanizm komunikacji wybrał, jak podzielił dane oraz jak liczy wyniki końcowe. Ważne jest też opisanie sposobu uruchomienia programu. Nawet najlepszy projekt traci na wartości, jeśli prowadzący nie może go łatwo uruchomić i sprawdzić.
+
+Raport z pomiarów powinien zawierać zarówno liczby, jak i interpretację. Same czasy wykonania nie wystarczą, jeśli nie towarzyszą im wnioski. Trzeba pokazać, kiedy równoległość przynosi korzyść i kiedy pojawiają się ograniczenia. To właśnie analiza czyni projekt pełnym i wartościowym.

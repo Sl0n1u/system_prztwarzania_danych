@@ -1,0 +1,5 @@
+Podział danych między workery ma duży wpływ na końcową wydajność systemu. Jeśli jeden worker otrzyma znacznie więcej pracy niż pozostałe, cały program będzie czekał na jego zakończenie. Z tego powodu warto zadbać o możliwie równy rozkład plików lub zadań. Nawet prosty algorytm podziału może dać dobre rezultaty, jeśli dane są podobnej wielkości.
+
+W bardziej rozbudowanych systemach stosuje się dynamiczne przydzielanie zadań. Worker, który skończy wcześniej, może otrzymać kolejny fragment danych. Taki mechanizm zwiększa złożoność systemu, ale poprawia wykorzystanie zasobów. W projekcie edukacyjnym wystarczy prostsze rozwiązanie statyczne, jednak warto mieć świadomość jego ograniczeń.
+
+Równoważenie obciążenia jest szczególnie ważne przy zróżnicowanych danych wejściowych. Jeśli jeden plik jest bardzo duży, a inne małe, prosty podział po liczbie plików może nie wystarczyć. Wtedy wyniki pomiarów mogą być gorsze niż oczekiwano. To dobra okazja do dyskusji o skalowalności i projektowaniu systemów.

@@ -1,0 +1,5 @@
+Architektura coordinator worker jest prostym i czytelnym modelem organizacji pracy. Koordynator odpowiada za podział zadania, uruchamianie pracy i zebranie rezultatów. Workery wykonują obliczenia na przydzielonych fragmentach danych. Taki podział odpowiedzialności ułatwia testowanie i rozwijanie projektu.
+
+W wersji podstawowej cały system może działać na jednym komputerze. Mimo to procesy powinny być od siebie oddzielone i komunikować się przez zdefiniowany mechanizm. Można wykorzystać sockety TCP, kolejki albo HTTP API. Każde rozwiązanie ma inne zalety. Sockety są proste i dobrze pokazują niskopoziomową komunikację, kolejki są wygodne lokalnie, a HTTP jest bardziej rozbudowane, ale też cięższe do wdrożenia.
+
+Dobry projekt powinien obsługiwać podstawowe błędy. Może zdarzyć się brak pliku wejściowego, pusty plik albo błąd połączenia z workerem. Nawet jeśli obsługa wyjątków będzie prosta, warto ją przewidzieć. Stabilność rozwiązania wpływa na ocenę i pokazuje dojrzałe podejście do programowania.
