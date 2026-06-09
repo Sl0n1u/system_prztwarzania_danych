@@ -1,5 +1,0 @@
-Poprawność działania systemu należy weryfikować równolegle z pomiarami wydajności. Szybki program nie ma wartości, jeśli zwraca niepełne albo błędne wyniki. Dlatego każdą wersję równoległą warto porównać z wersją sekwencyjną. Jeśli oba warianty zwracają ten sam ranking słów, można uznać, że podstawowa logika działa prawidłowo.
-
-Dobre testy powinny obejmować także przypadki brzegowe. Warto sprawdzić zachowanie programu dla pustego pliku, pliku zawierającego tylko znaki interpunkcyjne albo zestawu z jednym bardzo dużym plikiem. Takie scenariusze pomagają ujawnić błędy, które nie pojawiają się przy standardowych danych. To ważny element pracy inżynierskiej.
-
-Walidacja wyników może być prosta, ale musi być świadoma. Czasem wystarczy porównać sumaryczną liczbę słów i listę najczęstszych tokenów. Innym razem przyda się dokładniejsze zestawienie wyników cząstkowych. Kluczowe jest, aby student potrafił wykazać, że jego rozwiązanie działa poprawnie.

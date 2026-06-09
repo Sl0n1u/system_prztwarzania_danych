@@ -1,5 +1,0 @@
-Każdy prosty system rozproszony można dalej rozwijać. Po wykonaniu wersji podstawowej warto zastanowić się, jakie rozszerzenia miałyby sens w praktyce. Można dodać dynamiczne wykrywanie nowych workerów, bardziej zaawansowane logowanie albo odporność na awarie pojedynczego procesu. Takie funkcje wykraczają poza minimum projektowe, ale dobrze pokazują potencjał architektury.
-
-Innym kierunkiem rozwoju jest rozszerzenie analizy tekstu. Zamiast samego liczenia słów można dodać filtrowanie stop words, analizę bigramów albo statystyki dla poszczególnych dokumentów. Wymaga to dodatkowej pracy, ale nadal mieści się w tym samym modelu koordynator worker. Dzięki temu projekt może być dobrą podstawą do dalszych eksperymentów.
-
-Warto pamiętać, że prostota też jest zaletą. Lepiej oddać rozwiązanie mniejsze, ale stabilne i dobrze opisane, niż system pełen nieukończonych funkcji. Rozszerzenia mają sens dopiero wtedy, gdy wersja podstawowa działa poprawnie.

@@ -1,40 +1,35 @@
-import os
-import sys
-import socket
-import json
-from collections import Counter
-import utils
+import collections
+from utils import clean_text
 
-def send_result(host, port, result_payload):
-    # Dokladna implementacja Wariantu A ze specyfikacji zadania
-    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-        s.connect((host, port))
-        s.sendall(json.dumps(result_payload).encode('utf-8'))
+def worker_main(worker_id, task_queue, result_queue):
+    print(f"[Worker {worker_id}] Starting initialization...")
+    local_counter = collections.Counter()
+    processed_files = 0
 
-def worker_main(worker_id, coordinator_host, coordinator_port, assigned_files, directory_path):
-    print(f"[Worker {worker_id}] Rozpoczynam przetwarzanie {len(assigned_files)} plikow...")
-    local_counts = Counter()
-    
-    # Faza Map: Obliczenia na przydzielonym fragmencie danych
-    for filename in assigned_files:
-        filepath = os.path.join(directory_path, filename)
+    while True:
+        task = task_queue.get()
+        
+        # Check for the poison pill
+        if task is None:
+            print(f"[Worker {worker_id}] Received stop signal. Files processed: {processed_files}")
+            break
+
+        file_path = task
+        print(f"[Worker {worker_id}] Processing file: {file_path}")
+        
         try:
-            with open(filepath, 'r', encoding='utf-8') as f:
+            with open(file_path, 'r', encoding='utf-8') as f:
                 text = f.read()
-                words = utils.clean_text(text)
-                local_counts.update(words)
+                words = clean_text(text)
+                local_counter.update(words)
+                processed_files += 1
         except Exception as e:
-            print(f"[Worker {worker_id}] Blad podczas czytania pliku {filename}: {e}")
-            
-    # Przygotowanie struktury sieciowej do wysylki
-    payload = {
+            print(f"[Worker {worker_id}] Error reading {file_path}: {e}")
+
+    # Map phase complete, sending aggregated result to Reduce phase
+    print(f"[Worker {worker_id}] Sending aggregated results to coordinator...")
+    result_queue.put({
         "worker_id": worker_id,
-        "result": dict(local_counts)
-    }
-    
-    print(f"[Worker {worker_id}] Przetwarzanie zakonczone. Wysylam wyniki do koordynatora przez TCP...")
-    try:
-        send_result(coordinator_host, coordinator_port, payload)
-        print(f"[Worker {worker_id}] Wyniki wyslane pomyslnie.")
-    except Exception as e:
-        print(f"[Worker {worker_id}] Blad komunikacji TCP: {e}")
+        "counter": local_counter
+    })
+    print(f"[Worker {worker_id}] Process terminated cleanly.")

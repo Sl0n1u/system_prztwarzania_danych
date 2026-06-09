@@ -1,5 +1,0 @@
-Pomiar wydajności jest ważną częścią każdego projektu związanego z równoległością. Sam fakt uruchomienia kilku procesów nie oznacza jeszcze, że program działa szybciej. Należy porównać wersję sekwencyjną z wersją równoległą i obliczyć przyspieszenie. Warto też zmierzyć efektywność, czyli sprawdzić, jak dobrze wykorzystywana jest rosnąca liczba workerów.
-
-W praktyce testy powinny być wykonywane wielokrotnie. Pojedynczy wynik może zależeć od chwilowego obciążenia komputera, działania systemu operacyjnego albo dostępu do dysku. Z tego powodu rozsądnie jest uruchomić każdy scenariusz co najmniej trzy razy i policzyć średnią. Dobrze przygotowana tabela wyników pomaga później wyciągać wnioski. Czasem cztery workery dają duży zysk, a czasem kolejne procesy tylko zwiększają narzut.
-
-Analiza wyników powinna być rzeczowa. Jeśli system nie skaluje się dobrze, trzeba wskazać możliwe przyczyny. Problemem może być zbyt mały zbiór danych, koszt komunikacji albo nierówny podział plików między workery. Wnioski są równie ważne jak sam kod. Projekt ma pokazać nie tylko umiejętność programowania, ale także rozumienie ograniczeń architektury.

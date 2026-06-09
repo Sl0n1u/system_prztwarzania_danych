@@ -1,46 +1,21 @@
-Test 1.
-Znaleziono 10 plikow. Rozpoczynam przetwarzanie sekwencyjne...
-
-=== WYNIKI (Wersja Sekwencyjna) ===
-Czas wykonania: 2.44 s
 Top 10 najczestszych slow:
-result: 84126
-system: 74190
-the: 63971
-communication: 63379
-analysis: 62862
-implementation: 58966
-student: 58893
-project: 58506
-architecture: 58452
-output: 58386
+1. result: 14800 wystapien
+2. system: 13142 wystapien
+3. communication: 10659 wystapien
+4. the: 10545 wystapien
+5. analysis: 10528 wystapien
+6. project: 9897 wystapien
+7. architecture: 9852 wystapien
+8. implementation: 9802 wystapien
+9. input: 9773 wystapien
+10. synchronization: 9744 wystapien
 
 
-Test 2.
-Koordynator przygotowuje podzial 10 plikow dla 2 workerow...
-[Worker 1] Rozpoczynam przetwarzanie 5 plikow...
-[Worker 0] Rozpoczynam przetwarzanie 5 plikow...
-[Worker 1] Przetwarzanie zakonczone. Wysylam wyniki do koordynatora przez TCP...
-[Worker 1] Wyniki wyslane pomyslnie.
-[Worker 0] Przetwarzanie zakonczone. Wysylam wyniki do koordynatora przez TCP...
-[Worker 0] Wyniki wyslane pomyslnie.
+Wersja sekwencyjna: 0.52s
+Wersja sekwencyjna: 0.36s
+Wersja sekwencyjna: 0.42s
 
-=== ANALIZA CZESTOSCI SLOW ===
-Top 10 najczestszych slow:
-1. result: 84126 wystapien
-2. system: 74190 wystapien
-3. the: 63971 wystapien
-4. communication: 63379 wystapien
-5. analysis: 62862 wystapien
-6. implementation: 58966 wystapien
-7. student: 58893 wystapien
-8. project: 58506 wystapien
-9. architecture: 58452 wystapien
-10. output: 58386 wystapien
+Czas wykonania (2 workery): 0.63s
+Czas wykonania (2 workery): 0.57s
+Czas wykonania (2 workery): 0.62s
 
-=== POMIARY WYDAJNOSCI ===
-Wersja sekwencyjna: 2.44s
-2 workery: 1.89s (przyspieszenie: 1.29x)
-Czas fazy Map: 1.89s
-Czas fazy Reduce: 0.00s
-Efektywnosc: 0.64

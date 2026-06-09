@@ -1,52 +1,54 @@
 import os
 import time
 from collections import Counter
-import utils
+from utils import clean_text
 
-def process_files_sequential(directory_path):
-    total_counts = Counter()
+def process_directory(directory_path):
+    print(f"[Sequential] Starting processing directory: {directory_path}")
     
-    # Pobranie listy plikow .txt z podanego folderu
+    # Weryfikacja, czy folder istnieje
     if not os.path.exists(directory_path):
-        print(f"Blad: Folder {directory_path} nie istnieje!")
-        return total_counts
-        
-    files = [f for f in os.listdir(directory_path) if f.endswith('.txt')]
-    
-    if not files:
-        print("Nie znaleziono plikow .txt w folderze.")
-        return total_counts
+        print(f"[Sequential] Error: Directory '{directory_path}' does not exist.")
+        return
 
-    print(f"Znaleziono {len(files)} plikow. Rozpoczynam przetwarzanie sekwencyjne...")
+    # Rozpoczęcie pomiaru czasu
+    start_time = time.time()
     
-    # Przetwarzanie kazdego pliku jeden po drugim
-    for filename in files:
-        filepath = os.path.join(directory_path, filename)
-        try:
-            with open(filepath, 'r', encoding='utf-8') as file:
-                text = file.read()
-                words = utils.clean_text(text)
-                total_counts.update(words)
-        except Exception as e:
-            print(f"Blad podczas czytania pliku {filename}: {e}")
+    total_counter = Counter()
+    processed_files = 0
+
+    # Iteracja po wszystkich plikach tekstowych w folderze
+    for filename in os.listdir(directory_path):
+        if filename.endswith(".txt"):
+            file_path = os.path.join(directory_path, filename)
             
-    return total_counts
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    text = f.read()
+                    words = clean_text(text)
+                    total_counter.update(words)
+                    processed_files += 1
+            except Exception as e:
+                print(f"[Sequential] Error reading {file_path}: {e}")
 
-if __name__ == '__main__':
-    # Zakladamy, ze dane sa w folderze 'student_datasets/dataset_large'
-    # (musisz wczesniej uruchomic skrypt do generowania danych)
-    data_folder = 'student_datasets/dataset_large'
-    
-    start_time = time.perf_counter()
-    result = process_files_sequential(data_folder)
-    end_time = time.perf_counter()
-    
+    # Zakończenie pomiaru czasu
+    end_time = time.time()
     execution_time = end_time - start_time
-    
-    print("\n=== WYNIKI (Wersja Sekwencyjna) ===")
-    print(f"Czas wykonania: {execution_time:.2f} s")
+
+    print("\n=== ANALIZA CZESTOSCI SLOW ===")
+    print(f"Przetworzono plikow: {processed_files}")
     print("Top 10 najczestszych slow:")
     
-    # Wyswietlenie 10 najczestszych slow
-    for word, count in result.most_common(10):
-        print(f"{word}: {count}")
+    # Pobranie i sformatowanie 10 najpopularniejszych wyników
+    top_10 = total_counter.most_common(10)
+    for i, (word, count) in enumerate(top_10, 1):
+        print(f"{i}. {word}: {count} wystapien")
+
+    print("\n=== POMIARY WYDAJNOSCI ===")
+    print(f"Wersja sekwencyjna: {execution_time:.2f}s")
+
+
+if __name__ == "__main__":
+    
+    TARGET_DIR = r".\data\dataset_small"
+    process_directory(TARGET_DIR)

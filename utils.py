@@ -1,14 +1,9 @@
-import string
+import re
 
 def clean_text(text):
-    # Zamiana na male litery zgodnie ze specyfikacja
+    # Convert to lowercase
     text = text.lower()
-    
-    # Usuniecie interpunkcji
-    for p in string.punctuation:
-        text = text.replace(p, ' ')
-        
-    # Rozbicie na slowa i filtrowanie - zostawiamy tylko slowa skladajace sie z liter (pomijamy liczby)
-    words = [word for word in text.split() if word.isalpha()]
-    
-    return words
+    # Remove punctuation, keep only word characters and whitespaces
+    text = re.sub(r'[^\w\s]', '', text)
+    # Split into tokens and filter out any words containing digits or underscores
+    return [word for word in text.split() if word.isalpha()]

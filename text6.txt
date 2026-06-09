@@ -1,5 +1,0 @@
-Zbieranie wyników od wielu workerów wymaga poprawnej synchronizacji. Jeśli kilka procesów próbuje jednocześnie zapisać dane do wspólnej struktury, może dojść do błędów lub utraty części informacji. Dlatego w niektórych rozwiązaniach potrzebne są blokady, zdarzenia albo inne mechanizmy koordynacji. W prostym projekcie wystarczy zastosować podstawowe narzędzia dostępne w wybranym języku programowania.
-
-Agregacja wyników polega na łączeniu słowników częstości słów w jeden wspólny wynik. Trzeba zadbać, aby każde słowo zostało poprawnie zsumowane. Jeśli worker zwróci lokalny wynik dla słowa python, a inny dla słowa data, koordynator powinien umieć połączyć wszystkie te pary klucz wartość. To etap, który odpowiada fazie Reduce.
-
-Błędy synchronizacji nie zawsze są widoczne od razu. Czasem program działa poprawnie dla małych danych, a zawodzi przy większym obciążeniu. Z tego powodu warto testować system wielokrotnie i obserwować, czy wyniki są spójne. Niezawodność jest ważna tak samo jak wydajność.
