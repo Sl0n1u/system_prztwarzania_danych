@@ -12,7 +12,7 @@ DATASETS = [
     r".\data\dataset_large"
 ]
 WORKER_COUNTS = [1, 2, 4]
-REPETITIONS = 3
+REPETITIONS = 10
 
 def run_benchmark():
     print("=== ROZPOCZYNAM TESTY WYDAJNOSCIOWE ===")
