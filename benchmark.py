@@ -14,6 +14,12 @@ DATASETS = [
 WORKER_COUNTS = [1, 2, 4]
 REPETITIONS = 10
 
+def format_top10(top10_list):
+    """Zmienia surowa liste z Pythona na ladny ciag znakow"""
+    if not top10_list:
+        return "Brak danych"
+    return " | ".join([f"{i}. {word}: {count}" for i, (word, count) in enumerate(top10_list, 1)])
+
 def run_benchmark():
     print("=== ROZPOCZYNAM TESTY WYDAJNOSCIOWE ===")
     print(f"Liczba powtorzen dla kazdego pomiaru: {REPETITIONS}\n")
@@ -31,34 +37,46 @@ def run_benchmark():
 
         print("   [~] Trwa pomiar wersji sekwencyjnej... ", end="", flush=True)
         seq_times = []
+        last_top_10_str = ""
+        
         for i in range(REPETITIONS):
             with contextlib.redirect_stdout(io.StringIO()):
-                t = process_directory(dataset)
+                # Odbieramy czas i liste z funkcji sekwencyjnej
+                t, top_10_data = process_directory(dataset)
+                
             seq_times.append(t)
             print(f"[{i+1}: {t:.2f}s] ", end="", flush=True)
             
+            # Formarujemy Top 10 tylko za pierwszym razem
+            if i == 0:
+                last_top_10_str = format_top10(top_10_data)
+                
         avg_seq_time = sum(seq_times) / REPETITIONS
         results[dataset_name]['sequential'] = avg_seq_time
         print(f"Gotowe (Srednia: {avg_seq_time:.2f}s)")
+        print(f"       [WERYFIKACJA TOP10]: {last_top_10_str}")
 
         results[dataset_name]['parallel'] = {}
         for workers in WORKER_COUNTS:
             print(f"   [~] Trwa pomiar dla {workers} workerow... ", end="", flush=True)
             
-            # Listy na poszczegolne metryki
             par_times = []
             map_times = []
             reduce_times = []
+            last_top_10_par_str = ""
             
             for i in range(REPETITIONS):
                 with contextlib.redirect_stdout(io.StringIO()):
-                    # Rozpakowanie 3 wartosci z koordynatora
-                    t_total, t_map, t_reduce = run_parallel_system(dataset, num_workers=workers)
+                    # Odbieramy 4 wartosci z funkcji rozproszonej
+                    t_total, t_map, t_reduce, top_10_par_data = run_parallel_system(dataset, num_workers=workers)
+                    
                 par_times.append(t_total)
                 map_times.append(t_map)
                 reduce_times.append(t_reduce)
-                # Czas calkowity po kazdej iteracji
                 print(f"[{i+1}: {t_total:.2f}s] ", end="", flush=True)
+                
+                if i == 0:
+                    last_top_10_par_str = format_top10(top_10_par_data)
                 
             avg_par_time = sum(par_times) / REPETITIONS
             avg_map_time = sum(map_times) / REPETITIONS
@@ -75,6 +93,7 @@ def run_benchmark():
                 'efficiency': efficiency
             }
             print(f"Gotowe (Srednia: {avg_par_time:.2f}s)")
+            print(f"       [WERYFIKACJA TOP10]: {last_top_10_par_str}")
         print("-" * 50)
 
     print("\n\n" + "="*85)
