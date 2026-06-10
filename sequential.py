@@ -46,6 +46,7 @@ def process_directory(directory_path):
 
     print("\n=== POMIARY WYDAJNOSCI ===")
     print(f"Wersja sekwencyjna: {execution_time:.2f}s")
+    return execution_time
 
 
 if __name__ == "__main__":

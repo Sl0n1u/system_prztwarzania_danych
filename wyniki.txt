@@ -1,21 +1,758 @@
-Top 10 najczestszych slow:
-1. result: 14800 wystapien
-2. system: 13142 wystapien
-3. communication: 10659 wystapien
-4. the: 10545 wystapien
-5. analysis: 10528 wystapien
-6. project: 9897 wystapien
-7. architecture: 9852 wystapien
-8. implementation: 9802 wystapien
-9. input: 9773 wystapien
-10. synchronization: 9744 wystapien
+=== ROZPOCZYNAM TESTY WYDAJNOSCIOWE ===
+Liczba powtorzen dla kazdego pomiaru: 3
+
+-> Testowanie zbioru danych: dataset_small
+   [~] Trwa pomiar wersji sekwencyjnej... Gotowe (Srednia: 0.39s)
+   [~] Trwa pomiar dla 1 workerow...[Worker 0] Starting initialization...
+[Worker 0] Processing file: .\data\dataset_small\small_1.txt
+[Worker 0] Processing file: .\data\dataset_small\small_2.txt
+[Worker 0] Processing file: .\data\dataset_small\small_3.txt
+[Worker 0] Processing file: .\data\dataset_small\small_4.txt
+[Worker 0] Processing file: .\data\dataset_small\small_5.txt
+[Worker 0] Received stop signal. Files processed: 5
+[Worker 0] Sending aggregated results to coordinator...
+[Worker 0] Process terminated cleanly.
+[Worker 0] Starting initialization...
+[Worker 0] Processing file: .\data\dataset_small\small_1.txt
+[Worker 0] Processing file: .\data\dataset_small\small_2.txt
+[Worker 0] Processing file: .\data\dataset_small\small_3.txt
+[Worker 0] Processing file: .\data\dataset_small\small_4.txt
+[Worker 0] Processing file: .\data\dataset_small\small_5.txt
+[Worker 0] Received stop signal. Files processed: 5
+[Worker 0] Sending aggregated results to coordinator...
+[Worker 0] Process terminated cleanly.
+[Worker 0] Starting initialization...
+[Worker 0] Processing file: .\data\dataset_small\small_1.txt
+[Worker 0] Processing file: .\data\dataset_small\small_2.txt
+[Worker 0] Processing file: .\data\dataset_small\small_3.txt
+[Worker 0] Processing file: .\data\dataset_small\small_4.txt
+[Worker 0] Processing file: .\data\dataset_small\small_5.txt
+[Worker 0] Received stop signal. Files processed: 5
+[Worker 0] Sending aggregated results to coordinator...
+[Worker 0] Process terminated cleanly.
+ Gotowe (Srednia: 0.66s)
+   [~] Trwa pomiar dla 2 workerow...[Worker 0] Starting initialization...
+[Worker 0] Processing file: .\data\dataset_small\small_1.txt
+[Worker 1] Starting initialization...
+[Worker 1] Processing file: .\data\dataset_small\small_2.txt
+[Worker 0] Processing file: .\data\dataset_small\small_3.txt
+[Worker 1] Processing file: .\data\dataset_small\small_4.txt
+[Worker 0] Processing file: .\data\dataset_small\small_5.txt
+[Worker 1] Received stop signal. Files processed: 2
+[Worker 1] Sending aggregated results to coordinator...
+[Worker 1] Process terminated cleanly.
+[Worker 0] Received stop signal. Files processed: 3
+[Worker 0] Sending aggregated results to coordinator...
+[Worker 0] Process terminated cleanly.
+[Worker 0] Starting initialization...
+[Worker 0] Processing file: .\data\dataset_small\small_1.txt
+[Worker 1] Starting initialization...
+[Worker 1] Processing file: .\data\dataset_small\small_2.txt
+[Worker 0] Processing file: .\data\dataset_small\small_3.txt
+[Worker 1] Processing file: .\data\dataset_small\small_4.txt
+[Worker 0] Processing file: .\data\dataset_small\small_5.txt
+[Worker 1] Received stop signal. Files processed: 2
+[Worker 1] Sending aggregated results to coordinator...
+[Worker 1] Process terminated cleanly.
+[Worker 0] Received stop signal. Files processed: 3
+[Worker 0] Sending aggregated results to coordinator...
+[Worker 0] Process terminated cleanly.
+[Worker 0] Starting initialization...
+[Worker 0] Processing file: .\data\dataset_small\small_1.txt
+[Worker 1] Starting initialization...
+[Worker 1] Processing file: .\data\dataset_small\small_2.txt
+[Worker 0] Processing file: .\data\dataset_small\small_3.txt
+[Worker 1] Processing file: .\data\dataset_small\small_4.txt
+[Worker 0] Processing file: .\data\dataset_small\small_5.txt
+[Worker 1] Received stop signal. Files processed: 2
+[Worker 1] Sending aggregated results to coordinator...
+[Worker 1] Process terminated cleanly.
+[Worker 0] Received stop signal. Files processed: 3
+[Worker 0] Sending aggregated results to coordinator...
+[Worker 0] Process terminated cleanly.
+ Gotowe (Srednia: 0.53s)
+   [~] Trwa pomiar dla 4 workerow...[Worker 0] Starting initialization...
+[Worker 0] Processing file: .\data\dataset_small\small_1.txt
+[Worker 1] Starting initialization...
+[Worker 1] Processing file: .\data\dataset_small\small_2.txt
+[Worker 2] Starting initialization...
+[Worker 2] Processing file: .\data\dataset_small\small_3.txt
+[Worker 0] Processing file: .\data\dataset_small\small_4.txt
+[Worker 3] Starting initialization...
+[Worker 3] Processing file: .\data\dataset_small\small_5.txt
+[Worker 1] Received stop signal. Files processed: 1
+[Worker 1] Sending aggregated results to coordinator...
+[Worker 1] Process terminated cleanly.
+[Worker 2] Received stop signal. Files processed: 1
+[Worker 2] Sending aggregated results to coordinator...
+[Worker 2] Process terminated cleanly.
+[Worker 0] Received stop signal. Files processed: 2
+[Worker 0] Sending aggregated results to coordinator...
+[Worker 0] Process terminated cleanly.
+[Worker 3] Received stop signal. Files processed: 1
+[Worker 3] Sending aggregated results to coordinator...
+[Worker 3] Process terminated cleanly.
+[Worker 0] Starting initialization...
+[Worker 0] Processing file: .\data\dataset_small\small_1.txt
+[Worker 1] Starting initialization...
+[Worker 1] Processing file: .\data\dataset_small\small_2.txt
+[Worker 2] Starting initialization...
+[Worker 2] Processing file: .\data\dataset_small\small_3.txt
+[Worker 0] Processing file: .\data\dataset_small\small_4.txt
+[Worker 3] Starting initialization...
+[Worker 3] Processing file: .\data\dataset_small\small_5.txt
+[Worker 1] Received stop signal. Files processed: 1
+[Worker 1] Sending aggregated results to coordinator...
+[Worker 1] Process terminated cleanly.
+[Worker 2] Received stop signal. Files processed: 1
+[Worker 2] Sending aggregated results to coordinator...
+[Worker 2] Process terminated cleanly.
+[Worker 0] Received stop signal. Files processed: 2
+[Worker 0] Sending aggregated results to coordinator...
+[Worker 0] Process terminated cleanly.
+[Worker 3] Received stop signal. Files processed: 1
+[Worker 3] Sending aggregated results to coordinator...
+[Worker 3] Process terminated cleanly.
+[Worker 0] Starting initialization...
+[Worker 0] Processing file: .\data\dataset_small\small_1.txt
+[Worker 1] Starting initialization...
+[Worker 1] Processing file: .\data\dataset_small\small_2.txt
+[Worker 0] Processing file: .\data\dataset_small\small_3.txt
+[Worker 2] Starting initialization...
+[Worker 2] Processing file: .\data\dataset_small\small_4.txt
+[Worker 3] Starting initialization...
+[Worker 3] Processing file: .\data\dataset_small\small_5.txt
+[Worker 1] Received stop signal. Files processed: 1
+[Worker 1] Sending aggregated results to coordinator...
+[Worker 1] Process terminated cleanly.
+[Worker 2] Received stop signal. Files processed: 1
+[Worker 2] Sending aggregated results to coordinator...
+[Worker 2] Process terminated cleanly.
+[Worker 0] Received stop signal. Files processed: 2
+[Worker 0] Sending aggregated results to coordinator...
+[Worker 0] Process terminated cleanly.
+[Worker 3] Received stop signal. Files processed: 1
+[Worker 3] Sending aggregated results to coordinator...
+[Worker 3] Process terminated cleanly.
+ Gotowe (Srednia: 0.56s)
+--------------------------------------------------
+-> Testowanie zbioru danych: dataset_medium
+   [~] Trwa pomiar wersji sekwencyjnej... Gotowe (Srednia: 6.40s)
+   [~] Trwa pomiar dla 1 workerow...[Worker 0] Starting initialization...
+[Worker 0] Processing file: .\data\dataset_medium\medium_1.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_10.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_11.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_12.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_13.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_14.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_15.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_2.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_3.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_4.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_5.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_6.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_7.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_8.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_9.txt
+[Worker 0] Received stop signal. Files processed: 15
+[Worker 0] Sending aggregated results to coordinator...
+[Worker 0] Process terminated cleanly.
+[Worker 0] Starting initialization...
+[Worker 0] Processing file: .\data\dataset_medium\medium_1.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_10.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_11.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_12.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_13.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_14.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_15.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_2.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_3.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_4.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_5.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_6.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_7.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_8.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_9.txt
+[Worker 0] Received stop signal. Files processed: 15
+[Worker 0] Sending aggregated results to coordinator...
+[Worker 0] Process terminated cleanly.
+[Worker 0] Starting initialization...
+[Worker 0] Processing file: .\data\dataset_medium\medium_1.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_10.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_11.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_12.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_13.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_14.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_15.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_2.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_3.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_4.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_5.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_6.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_7.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_8.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_9.txt
+[Worker 0] Received stop signal. Files processed: 15
+[Worker 0] Sending aggregated results to coordinator...
+[Worker 0] Process terminated cleanly.
+ Gotowe (Srednia: 7.67s)
+   [~] Trwa pomiar dla 2 workerow...[Worker 0] Starting initialization...
+[Worker 0] Processing file: .\data\dataset_medium\medium_1.txt
+[Worker 1] Starting initialization...
+[Worker 1] Processing file: .\data\dataset_medium\medium_10.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_11.txt
+[Worker 1] Processing file: .\data\dataset_medium\medium_12.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_13.txt
+[Worker 1] Processing file: .\data\dataset_medium\medium_14.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_15.txt
+[Worker 1] Processing file: .\data\dataset_medium\medium_2.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_3.txt
+[Worker 1] Processing file: .\data\dataset_medium\medium_4.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_5.txt
+[Worker 1] Processing file: .\data\dataset_medium\medium_6.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_7.txt
+[Worker 1] Processing file: .\data\dataset_medium\medium_8.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_9.txt
+[Worker 1] Received stop signal. Files processed: 7
+[Worker 1] Sending aggregated results to coordinator...
+[Worker 1] Process terminated cleanly.
+[Worker 0] Received stop signal. Files processed: 8
+[Worker 0] Sending aggregated results to coordinator...
+[Worker 0] Process terminated cleanly.
+[Worker 0] Starting initialization...
+[Worker 0] Processing file: .\data\dataset_medium\medium_1.txt
+[Worker 1] Starting initialization...
+[Worker 1] Processing file: .\data\dataset_medium\medium_10.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_11.txt
+[Worker 1] Processing file: .\data\dataset_medium\medium_12.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_13.txt
+[Worker 1] Processing file: .\data\dataset_medium\medium_14.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_15.txt
+[Worker 1] Processing file: .\data\dataset_medium\medium_2.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_3.txt
+[Worker 1] Processing file: .\data\dataset_medium\medium_4.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_5.txt
+[Worker 1] Processing file: .\data\dataset_medium\medium_6.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_7.txt
+[Worker 1] Processing file: .\data\dataset_medium\medium_8.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_9.txt
+[Worker 1] Received stop signal. Files processed: 7
+[Worker 1] Sending aggregated results to coordinator...
+[Worker 1] Process terminated cleanly.
+[Worker 0] Received stop signal. Files processed: 8
+[Worker 0] Sending aggregated results to coordinator...
+[Worker 0] Process terminated cleanly.
+[Worker 0] Starting initialization...
+[Worker 0] Processing file: .\data\dataset_medium\medium_1.txt
+[Worker 1] Starting initialization...
+[Worker 1] Processing file: .\data\dataset_medium\medium_10.txt
+[Worker 1] Processing file: .\data\dataset_medium\medium_11.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_12.txt
+[Worker 1] Processing file: .\data\dataset_medium\medium_13.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_14.txt
+[Worker 1] Processing file: .\data\dataset_medium\medium_15.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_2.txt
+[Worker 1] Processing file: .\data\dataset_medium\medium_3.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_4.txt
+[Worker 1] Processing file: .\data\dataset_medium\medium_5.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_6.txt
+[Worker 1] Processing file: .\data\dataset_medium\medium_7.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_8.txt
+[Worker 1] Processing file: .\data\dataset_medium\medium_9.txt
+[Worker 0] Received stop signal. Files processed: 7
+[Worker 0] Sending aggregated results to coordinator...
+[Worker 0] Process terminated cleanly.
+[Worker 1] Received stop signal. Files processed: 8
+[Worker 1] Sending aggregated results to coordinator...
+[Worker 1] Process terminated cleanly.
+ Gotowe (Srednia: 3.90s)
+   [~] Trwa pomiar dla 4 workerow...[Worker 0] Starting initialization...
+[Worker 0] Processing file: .\data\dataset_medium\medium_1.txt
+[Worker 1] Starting initialization...
+[Worker 1] Processing file: .\data\dataset_medium\medium_10.txt
+[Worker 2] Starting initialization...
+[Worker 2] Processing file: .\data\dataset_medium\medium_11.txt
+[Worker 3] Starting initialization...
+[Worker 3] Processing file: .\data\dataset_medium\medium_12.txt
+[Worker 1] Processing file: .\data\dataset_medium\medium_13.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_14.txt
+[Worker 2] Processing file: .\data\dataset_medium\medium_15.txt
+[Worker 3] Processing file: .\data\dataset_medium\medium_2.txt
+[Worker 1] Processing file: .\data\dataset_medium\medium_3.txt
+[Worker 2] Processing file: .\data\dataset_medium\medium_4.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_5.txt
+[Worker 3] Processing file: .\data\dataset_medium\medium_6.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_7.txt
+[Worker 2] Processing file: .\data\dataset_medium\medium_8.txt
+[Worker 1] Processing file: .\data\dataset_medium\medium_9.txt
+[Worker 3] Received stop signal. Files processed: 3
+[Worker 3] Sending aggregated results to coordinator...
+[Worker 3] Process terminated cleanly.
+[Worker 0] Received stop signal. Files processed: 4
+[Worker 0] Sending aggregated results to coordinator...
+[Worker 0] Process terminated cleanly.
+[Worker 2] Received stop signal. Files processed: 4
+[Worker 2] Sending aggregated results to coordinator...
+[Worker 2] Process terminated cleanly.
+[Worker 1] Received stop signal. Files processed: 4
+[Worker 1] Sending aggregated results to coordinator...
+[Worker 1] Process terminated cleanly.
+[Worker 0] Starting initialization...
+[Worker 0] Processing file: .\data\dataset_medium\medium_1.txt
+[Worker 1] Starting initialization...
+[Worker 1] Processing file: .\data\dataset_medium\medium_10.txt
+[Worker 2] Starting initialization...
+[Worker 2] Processing file: .\data\dataset_medium\medium_11.txt
+[Worker 3] Starting initialization...
+[Worker 3] Processing file: .\data\dataset_medium\medium_12.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_13.txt
+[Worker 1] Processing file: .\data\dataset_medium\medium_14.txt
+[Worker 2] Processing file: .\data\dataset_medium\medium_15.txt
+[Worker 3] Processing file: .\data\dataset_medium\medium_2.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_3.txt
+[Worker 2] Processing file: .\data\dataset_medium\medium_4.txt
+[Worker 1] Processing file: .\data\dataset_medium\medium_5.txt
+[Worker 3] Processing file: .\data\dataset_medium\medium_6.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_7.txt
+[Worker 1] Processing file: .\data\dataset_medium\medium_8.txt
+[Worker 2] Processing file: .\data\dataset_medium\medium_9.txt
+[Worker 3] Received stop signal. Files processed: 3
+[Worker 3] Sending aggregated results to coordinator...
+[Worker 3] Process terminated cleanly.
+[Worker 0] Received stop signal. Files processed: 4
+[Worker 0] Sending aggregated results to coordinator...
+[Worker 0] Process terminated cleanly.
+[Worker 1] Received stop signal. Files processed: 4
+[Worker 1] Sending aggregated results to coordinator...
+[Worker 1] Process terminated cleanly.
+[Worker 2] Received stop signal. Files processed: 4
+[Worker 2] Sending aggregated results to coordinator...
+[Worker 2] Process terminated cleanly.
+[Worker 0] Starting initialization...
+[Worker 0] Processing file: .\data\dataset_medium\medium_1.txt
+[Worker 1] Starting initialization...
+[Worker 1] Processing file: .\data\dataset_medium\medium_10.txt
+[Worker 3] Starting initialization...
+[Worker 3] Processing file: .\data\dataset_medium\medium_11.txt
+[Worker 2] Starting initialization...
+[Worker 2] Processing file: .\data\dataset_medium\medium_12.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_13.txt
+[Worker 1] Processing file: .\data\dataset_medium\medium_14.txt
+[Worker 2] Processing file: .\data\dataset_medium\medium_15.txt
+[Worker 3] Processing file: .\data\dataset_medium\medium_2.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_3.txt
+[Worker 1] Processing file: .\data\dataset_medium\medium_4.txt
+[Worker 2] Processing file: .\data\dataset_medium\medium_5.txt
+[Worker 3] Processing file: .\data\dataset_medium\medium_6.txt
+[Worker 0] Processing file: .\data\dataset_medium\medium_7.txt
+[Worker 1] Processing file: .\data\dataset_medium\medium_8.txt
+[Worker 2] Processing file: .\data\dataset_medium\medium_9.txt
+[Worker 3] Received stop signal. Files processed: 3
+[Worker 3] Sending aggregated results to coordinator...
+[Worker 3] Process terminated cleanly.
+[Worker 0] Received stop signal. Files processed: 4
+[Worker 0] Sending aggregated results to coordinator...
+[Worker 0] Process terminated cleanly.
+[Worker 1] Received stop signal. Files processed: 4
+[Worker 1] Sending aggregated results to coordinator...
+[Worker 1] Process terminated cleanly.
+[Worker 2] Received stop signal. Files processed: 4
+[Worker 2] Sending aggregated results to coordinator...
+[Worker 2] Process terminated cleanly.
+ Gotowe (Srednia: 3.83s)
+--------------------------------------------------
+-> Testowanie zbioru danych: dataset_large
+   [~] Trwa pomiar wersji sekwencyjnej... Gotowe (Srednia: 26.13s)
+   [~] Trwa pomiar dla 1 workerow...[Worker 0] Starting initialization...
+[Worker 0] Processing file: .\data\dataset_large\large_1.txt
+[Worker 0] Processing file: .\data\dataset_large\large_10.txt
+[Worker 0] Processing file: .\data\dataset_large\large_11.txt
+[Worker 0] Processing file: .\data\dataset_large\large_12.txt
+[Worker 0] Processing file: .\data\dataset_large\large_13.txt
+[Worker 0] Processing file: .\data\dataset_large\large_14.txt
+[Worker 0] Processing file: .\data\dataset_large\large_15.txt
+[Worker 0] Processing file: .\data\dataset_large\large_16.txt
+[Worker 0] Processing file: .\data\dataset_large\large_17.txt
+[Worker 0] Processing file: .\data\dataset_large\large_18.txt
+[Worker 0] Processing file: .\data\dataset_large\large_19.txt
+[Worker 0] Processing file: .\data\dataset_large\large_2.txt
+[Worker 0] Processing file: .\data\dataset_large\large_20.txt
+[Worker 0] Processing file: .\data\dataset_large\large_21.txt
+[Worker 0] Processing file: .\data\dataset_large\large_22.txt
+[Worker 0] Processing file: .\data\dataset_large\large_23.txt
+[Worker 0] Processing file: .\data\dataset_large\large_24.txt
+[Worker 0] Processing file: .\data\dataset_large\large_25.txt
+[Worker 0] Processing file: .\data\dataset_large\large_26.txt
+[Worker 0] Processing file: .\data\dataset_large\large_27.txt
+[Worker 0] Processing file: .\data\dataset_large\large_28.txt
+[Worker 0] Processing file: .\data\dataset_large\large_29.txt
+[Worker 0] Processing file: .\data\dataset_large\large_3.txt
+[Worker 0] Processing file: .\data\dataset_large\large_30.txt
+[Worker 0] Processing file: .\data\dataset_large\large_4.txt
+[Worker 0] Processing file: .\data\dataset_large\large_5.txt
+[Worker 0] Processing file: .\data\dataset_large\large_6.txt
+[Worker 0] Processing file: .\data\dataset_large\large_7.txt
+[Worker 0] Processing file: .\data\dataset_large\large_8.txt
+[Worker 0] Processing file: .\data\dataset_large\large_9.txt
+[Worker 0] Received stop signal. Files processed: 30
+[Worker 0] Sending aggregated results to coordinator...
+[Worker 0] Process terminated cleanly.
+[Worker 0] Starting initialization...
+[Worker 0] Processing file: .\data\dataset_large\large_1.txt
+[Worker 0] Processing file: .\data\dataset_large\large_10.txt
+[Worker 0] Processing file: .\data\dataset_large\large_11.txt
+[Worker 0] Processing file: .\data\dataset_large\large_12.txt
+[Worker 0] Processing file: .\data\dataset_large\large_13.txt
+[Worker 0] Processing file: .\data\dataset_large\large_14.txt
+[Worker 0] Processing file: .\data\dataset_large\large_15.txt
+[Worker 0] Processing file: .\data\dataset_large\large_16.txt
+[Worker 0] Processing file: .\data\dataset_large\large_17.txt
+[Worker 0] Processing file: .\data\dataset_large\large_18.txt
+[Worker 0] Processing file: .\data\dataset_large\large_19.txt
+[Worker 0] Processing file: .\data\dataset_large\large_2.txt
+[Worker 0] Processing file: .\data\dataset_large\large_20.txt
+[Worker 0] Processing file: .\data\dataset_large\large_21.txt
+[Worker 0] Processing file: .\data\dataset_large\large_22.txt
+[Worker 0] Processing file: .\data\dataset_large\large_23.txt
+[Worker 0] Processing file: .\data\dataset_large\large_24.txt
+[Worker 0] Processing file: .\data\dataset_large\large_25.txt
+[Worker 0] Processing file: .\data\dataset_large\large_26.txt
+[Worker 0] Processing file: .\data\dataset_large\large_27.txt
+[Worker 0] Processing file: .\data\dataset_large\large_28.txt
+[Worker 0] Processing file: .\data\dataset_large\large_29.txt
+[Worker 0] Processing file: .\data\dataset_large\large_3.txt
+[Worker 0] Processing file: .\data\dataset_large\large_30.txt
+[Worker 0] Processing file: .\data\dataset_large\large_4.txt
+[Worker 0] Processing file: .\data\dataset_large\large_5.txt
+[Worker 0] Processing file: .\data\dataset_large\large_6.txt
+[Worker 0] Processing file: .\data\dataset_large\large_7.txt
+[Worker 0] Processing file: .\data\dataset_large\large_8.txt
+[Worker 0] Processing file: .\data\dataset_large\large_9.txt
+[Worker 0] Received stop signal. Files processed: 30
+[Worker 0] Sending aggregated results to coordinator...
+[Worker 0] Process terminated cleanly.
+[Worker 0] Starting initialization...
+[Worker 0] Processing file: .\data\dataset_large\large_1.txt
+[Worker 0] Processing file: .\data\dataset_large\large_10.txt
+[Worker 0] Processing file: .\data\dataset_large\large_11.txt
+[Worker 0] Processing file: .\data\dataset_large\large_12.txt
+[Worker 0] Processing file: .\data\dataset_large\large_13.txt
+[Worker 0] Processing file: .\data\dataset_large\large_14.txt
+[Worker 0] Processing file: .\data\dataset_large\large_15.txt
+[Worker 0] Processing file: .\data\dataset_large\large_16.txt
+[Worker 0] Processing file: .\data\dataset_large\large_17.txt
+[Worker 0] Processing file: .\data\dataset_large\large_18.txt
+[Worker 0] Processing file: .\data\dataset_large\large_19.txt
+[Worker 0] Processing file: .\data\dataset_large\large_2.txt
+[Worker 0] Processing file: .\data\dataset_large\large_20.txt
+[Worker 0] Processing file: .\data\dataset_large\large_21.txt
+[Worker 0] Processing file: .\data\dataset_large\large_22.txt
+[Worker 0] Processing file: .\data\dataset_large\large_23.txt
+[Worker 0] Processing file: .\data\dataset_large\large_24.txt
+[Worker 0] Processing file: .\data\dataset_large\large_25.txt
+[Worker 0] Processing file: .\data\dataset_large\large_26.txt
+[Worker 0] Processing file: .\data\dataset_large\large_27.txt
+[Worker 0] Processing file: .\data\dataset_large\large_28.txt
+[Worker 0] Processing file: .\data\dataset_large\large_29.txt
+[Worker 0] Processing file: .\data\dataset_large\large_3.txt
+[Worker 0] Processing file: .\data\dataset_large\large_30.txt
+[Worker 0] Processing file: .\data\dataset_large\large_4.txt
+[Worker 0] Processing file: .\data\dataset_large\large_5.txt
+[Worker 0] Processing file: .\data\dataset_large\large_6.txt
+[Worker 0] Processing file: .\data\dataset_large\large_7.txt
+[Worker 0] Processing file: .\data\dataset_large\large_8.txt
+[Worker 0] Processing file: .\data\dataset_large\large_9.txt
+[Worker 0] Received stop signal. Files processed: 30
+[Worker 0] Sending aggregated results to coordinator...
+[Worker 0] Process terminated cleanly.
+ Gotowe (Srednia: 25.46s)
+   [~] Trwa pomiar dla 2 workerow...[Worker 0] Starting initialization...
+[Worker 0] Processing file: .\data\dataset_large\large_1.txt
+[Worker 1] Starting initialization...
+[Worker 1] Processing file: .\data\dataset_large\large_10.txt
+[Worker 1] Processing file: .\data\dataset_large\large_11.txt
+[Worker 0] Processing file: .\data\dataset_large\large_12.txt
+[Worker 1] Processing file: .\data\dataset_large\large_13.txt
+[Worker 0] Processing file: .\data\dataset_large\large_14.txt
+[Worker 1] Processing file: .\data\dataset_large\large_15.txt
+[Worker 0] Processing file: .\data\dataset_large\large_16.txt
+[Worker 1] Processing file: .\data\dataset_large\large_17.txt
+[Worker 0] Processing file: .\data\dataset_large\large_18.txt
+[Worker 1] Processing file: .\data\dataset_large\large_19.txt
+[Worker 0] Processing file: .\data\dataset_large\large_2.txt
+[Worker 1] Processing file: .\data\dataset_large\large_20.txt
+[Worker 0] Processing file: .\data\dataset_large\large_21.txt
+[Worker 1] Processing file: .\data\dataset_large\large_22.txt
+[Worker 0] Processing file: .\data\dataset_large\large_23.txt
+[Worker 1] Processing file: .\data\dataset_large\large_24.txt
+[Worker 0] Processing file: .\data\dataset_large\large_25.txt
+[Worker 1] Processing file: .\data\dataset_large\large_26.txt
+[Worker 0] Processing file: .\data\dataset_large\large_27.txt
+[Worker 1] Processing file: .\data\dataset_large\large_28.txt
+[Worker 0] Processing file: .\data\dataset_large\large_29.txt
+[Worker 1] Processing file: .\data\dataset_large\large_3.txt
+[Worker 0] Processing file: .\data\dataset_large\large_30.txt
+[Worker 1] Processing file: .\data\dataset_large\large_4.txt
+[Worker 0] Processing file: .\data\dataset_large\large_5.txt
+[Worker 1] Processing file: .\data\dataset_large\large_6.txt
+[Worker 0] Processing file: .\data\dataset_large\large_7.txt
+[Worker 1] Processing file: .\data\dataset_large\large_8.txt
+[Worker 0] Processing file: .\data\dataset_large\large_9.txt
+[Worker 1] Received stop signal. Files processed: 15
+[Worker 1] Sending aggregated results to coordinator...
+[Worker 1] Process terminated cleanly.
+[Worker 0] Received stop signal. Files processed: 15
+[Worker 0] Sending aggregated results to coordinator...
+[Worker 0] Process terminated cleanly.
+[Worker 0] Starting initialization...
+[Worker 0] Processing file: .\data\dataset_large\large_1.txt
+[Worker 1] Starting initialization...
+[Worker 1] Processing file: .\data\dataset_large\large_10.txt
+[Worker 1] Processing file: .\data\dataset_large\large_11.txt
+[Worker 0] Processing file: .\data\dataset_large\large_12.txt
+[Worker 1] Processing file: .\data\dataset_large\large_13.txt
+[Worker 0] Processing file: .\data\dataset_large\large_14.txt
+[Worker 1] Processing file: .\data\dataset_large\large_15.txt
+[Worker 0] Processing file: .\data\dataset_large\large_16.txt
+[Worker 1] Processing file: .\data\dataset_large\large_17.txt
+[Worker 0] Processing file: .\data\dataset_large\large_18.txt
+[Worker 1] Processing file: .\data\dataset_large\large_19.txt
+[Worker 0] Processing file: .\data\dataset_large\large_2.txt
+[Worker 1] Processing file: .\data\dataset_large\large_20.txt
+[Worker 0] Processing file: .\data\dataset_large\large_21.txt
+[Worker 1] Processing file: .\data\dataset_large\large_22.txt
+[Worker 0] Processing file: .\data\dataset_large\large_23.txt
+[Worker 1] Processing file: .\data\dataset_large\large_24.txt
+[Worker 0] Processing file: .\data\dataset_large\large_25.txt
+[Worker 1] Processing file: .\data\dataset_large\large_26.txt
+[Worker 0] Processing file: .\data\dataset_large\large_27.txt
+[Worker 1] Processing file: .\data\dataset_large\large_28.txt
+[Worker 0] Processing file: .\data\dataset_large\large_29.txt
+[Worker 1] Processing file: .\data\dataset_large\large_3.txt
+[Worker 0] Processing file: .\data\dataset_large\large_30.txt
+[Worker 1] Processing file: .\data\dataset_large\large_4.txt
+[Worker 0] Processing file: .\data\dataset_large\large_5.txt
+[Worker 1] Processing file: .\data\dataset_large\large_6.txt
+[Worker 0] Processing file: .\data\dataset_large\large_7.txt
+[Worker 1] Processing file: .\data\dataset_large\large_8.txt
+[Worker 0] Processing file: .\data\dataset_large\large_9.txt
+[Worker 1] Received stop signal. Files processed: 15
+[Worker 1] Sending aggregated results to coordinator...
+[Worker 1] Process terminated cleanly.
+[Worker 0] Received stop signal. Files processed: 15
+[Worker 0] Sending aggregated results to coordinator...
+[Worker 0] Process terminated cleanly.
+[Worker 0] Starting initialization...
+[Worker 0] Processing file: .\data\dataset_large\large_1.txt
+[Worker 1] Starting initialization...
+[Worker 1] Processing file: .\data\dataset_large\large_10.txt
+[Worker 0] Processing file: .\data\dataset_large\large_11.txt
+[Worker 1] Processing file: .\data\dataset_large\large_12.txt
+[Worker 0] Processing file: .\data\dataset_large\large_13.txt
+[Worker 1] Processing file: .\data\dataset_large\large_14.txt
+[Worker 0] Processing file: .\data\dataset_large\large_15.txt
+[Worker 1] Processing file: .\data\dataset_large\large_16.txt
+[Worker 0] Processing file: .\data\dataset_large\large_17.txt
+[Worker 1] Processing file: .\data\dataset_large\large_18.txt
+[Worker 0] Processing file: .\data\dataset_large\large_19.txt
+[Worker 1] Processing file: .\data\dataset_large\large_2.txt
+[Worker 0] Processing file: .\data\dataset_large\large_20.txt
+[Worker 1] Processing file: .\data\dataset_large\large_21.txt
+[Worker 0] Processing file: .\data\dataset_large\large_22.txt
+[Worker 1] Processing file: .\data\dataset_large\large_23.txt
+[Worker 0] Processing file: .\data\dataset_large\large_24.txt
+[Worker 1] Processing file: .\data\dataset_large\large_25.txt
+[Worker 0] Processing file: .\data\dataset_large\large_26.txt
+[Worker 1] Processing file: .\data\dataset_large\large_27.txt
+[Worker 0] Processing file: .\data\dataset_large\large_28.txt
+[Worker 1] Processing file: .\data\dataset_large\large_29.txt
+[Worker 0] Processing file: .\data\dataset_large\large_3.txt
+[Worker 1] Processing file: .\data\dataset_large\large_30.txt
+[Worker 0] Processing file: .\data\dataset_large\large_4.txt
+[Worker 1] Processing file: .\data\dataset_large\large_5.txt
+[Worker 0] Processing file: .\data\dataset_large\large_6.txt
+[Worker 1] Processing file: .\data\dataset_large\large_7.txt
+[Worker 0] Processing file: .\data\dataset_large\large_8.txt
+[Worker 1] Processing file: .\data\dataset_large\large_9.txt
+[Worker 0] Received stop signal. Files processed: 15
+[Worker 0] Sending aggregated results to coordinator...
+[Worker 0] Process terminated cleanly.
+[Worker 1] Received stop signal. Files processed: 15
+[Worker 1] Sending aggregated results to coordinator...
+[Worker 1] Process terminated cleanly.
+ Gotowe (Srednia: 14.56s)
+   [~] Trwa pomiar dla 4 workerow...[Worker 0] Starting initialization...
+[Worker 0] Processing file: .\data\dataset_large\large_1.txt
+[Worker 1] Starting initialization...
+[Worker 1] Processing file: .\data\dataset_large\large_10.txt
+[Worker 2] Starting initialization...
+[Worker 2] Processing file: .\data\dataset_large\large_11.txt
+[Worker 3] Starting initialization...
+[Worker 3] Processing file: .\data\dataset_large\large_12.txt
+[Worker 0] Processing file: .\data\dataset_large\large_13.txt
+[Worker 1] Processing file: .\data\dataset_large\large_14.txt
+[Worker 3] Processing file: .\data\dataset_large\large_15.txt
+[Worker 2] Processing file: .\data\dataset_large\large_16.txt
+[Worker 0] Processing file: .\data\dataset_large\large_17.txt
+[Worker 1] Processing file: .\data\dataset_large\large_18.txt
+[Worker 3] Processing file: .\data\dataset_large\large_19.txt
+[Worker 2] Processing file: .\data\dataset_large\large_2.txt
+[Worker 0] Processing file: .\data\dataset_large\large_20.txt
+[Worker 1] Processing file: .\data\dataset_large\large_21.txt
+[Worker 3] Processing file: .\data\dataset_large\large_22.txt
+[Worker 2] Processing file: .\data\dataset_large\large_23.txt
+[Worker 0] Processing file: .\data\dataset_large\large_24.txt
+[Worker 1] Processing file: .\data\dataset_large\large_25.txt
+[Worker 3] Processing file: .\data\dataset_large\large_26.txt
+[Worker 2] Processing file: .\data\dataset_large\large_27.txt
+[Worker 0] Processing file: .\data\dataset_large\large_28.txt
+[Worker 1] Processing file: .\data\dataset_large\large_29.txt
+[Worker 3] Processing file: .\data\dataset_large\large_3.txt
+[Worker 2] Processing file: .\data\dataset_large\large_30.txt
+[Worker 0] Processing file: .\data\dataset_large\large_4.txt
+[Worker 1] Processing file: .\data\dataset_large\large_5.txt
+[Worker 3] Processing file: .\data\dataset_large\large_6.txt
+[Worker 2] Processing file: .\data\dataset_large\large_7.txt
+[Worker 0] Processing file: .\data\dataset_large\large_8.txt
+[Worker 1] Processing file: .\data\dataset_large\large_9.txt
+[Worker 3] Received stop signal. Files processed: 7
+[Worker 3] Sending aggregated results to coordinator...
+[Worker 3] Process terminated cleanly.
+[Worker 2] Received stop signal. Files processed: 7
+[Worker 2] Sending aggregated results to coordinator...
+[Worker 2] Process terminated cleanly.
+[Worker 1] Received stop signal. Files processed: 8
+[Worker 0] Received stop signal. Files processed: 8
+[Worker 1] Sending aggregated results to coordinator...
+[Worker 0] Sending aggregated results to coordinator...
+[Worker 1] Process terminated cleanly.
+[Worker 0] Process terminated cleanly.
+[Worker 0] Starting initialization...
+[Worker 0] Processing file: .\data\dataset_large\large_1.txt
+[Worker 1] Starting initialization...
+[Worker 1] Processing file: .\data\dataset_large\large_10.txt
+[Worker 2] Starting initialization...
+[Worker 2] Processing file: .\data\dataset_large\large_11.txt
+[Worker 3] Starting initialization...
+[Worker 3] Processing file: .\data\dataset_large\large_12.txt
+[Worker 0] Processing file: .\data\dataset_large\large_13.txt
+[Worker 1] Processing file: .\data\dataset_large\large_14.txt
+[Worker 2] Processing file: .\data\dataset_large\large_15.txt
+[Worker 3] Processing file: .\data\dataset_large\large_16.txt
+[Worker 0] Processing file: .\data\dataset_large\large_17.txt
+[Worker 2] Processing file: .\data\dataset_large\large_18.txt
+[Worker 1] Processing file: .\data\dataset_large\large_19.txt
+[Worker 3] Processing file: .\data\dataset_large\large_2.txt
+[Worker 2] Processing file: .\data\dataset_large\large_20.txt
+[Worker 0] Processing file: .\data\dataset_large\large_21.txt
+[Worker 1] Processing file: .\data\dataset_large\large_22.txt
+[Worker 3] Processing file: .\data\dataset_large\large_23.txt
+[Worker 2] Processing file: .\data\dataset_large\large_24.txt
+[Worker 0] Processing file: .\data\dataset_large\large_25.txt
+[Worker 1] Processing file: .\data\dataset_large\large_26.txt
+[Worker 3] Processing file: .\data\dataset_large\large_27.txt
+[Worker 0] Processing file: .\data\dataset_large\large_28.txt
+[Worker 2] Processing file: .\data\dataset_large\large_29.txt
+[Worker 1] Processing file: .\data\dataset_large\large_3.txt
+[Worker 3] Processing file: .\data\dataset_large\large_30.txt
+[Worker 2] Processing file: .\data\dataset_large\large_4.txt
+[Worker 0] Processing file: .\data\dataset_large\large_5.txt
+[Worker 1] Processing file: .\data\dataset_large\large_6.txt
+[Worker 3] Processing file: .\data\dataset_large\large_7.txt
+[Worker 0] Processing file: .\data\dataset_large\large_8.txt
+[Worker 2] Processing file: .\data\dataset_large\large_9.txt
+[Worker 3] Received stop signal. Files processed: 7
+[Worker 3] Sending aggregated results to coordinator...
+[Worker 3] Process terminated cleanly.
+[Worker 1] Received stop signal. Files processed: 7
+[Worker 1] Sending aggregated results to coordinator...
+[Worker 1] Process terminated cleanly.
+[Worker 2] Received stop signal. Files processed: 8
+[Worker 2] Sending aggregated results to coordinator...
+[Worker 2] Process terminated cleanly.
+[Worker 0] Received stop signal. Files processed: 8
+[Worker 0] Sending aggregated results to coordinator...
+[Worker 0] Process terminated cleanly.
+[Worker 0] Starting initialization...
+[Worker 0] Processing file: .\data\dataset_large\large_1.txt
+[Worker 1] Starting initialization...
+[Worker 1] Processing file: .\data\dataset_large\large_10.txt
+[Worker 2] Starting initialization...
+[Worker 2] Processing file: .\data\dataset_large\large_11.txt
+[Worker 3] Starting initialization...
+[Worker 3] Processing file: .\data\dataset_large\large_12.txt
+[Worker 0] Processing file: .\data\dataset_large\large_13.txt
+[Worker 1] Processing file: .\data\dataset_large\large_14.txt
+[Worker 2] Processing file: .\data\dataset_large\large_15.txt
+[Worker 3] Processing file: .\data\dataset_large\large_16.txt
+[Worker 0] Processing file: .\data\dataset_large\large_17.txt
+[Worker 1] Processing file: .\data\dataset_large\large_18.txt
+[Worker 2] Processing file: .\data\dataset_large\large_19.txt
+[Worker 3] Processing file: .\data\dataset_large\large_2.txt
+[Worker 0] Processing file: .\data\dataset_large\large_20.txt
+[Worker 1] Processing file: .\data\dataset_large\large_21.txt
+[Worker 2] Processing file: .\data\dataset_large\large_22.txt
+[Worker 3] Processing file: .\data\dataset_large\large_23.txt
+[Worker 0] Processing file: .\data\dataset_large\large_24.txt
+[Worker 1] Processing file: .\data\dataset_large\large_25.txt
+[Worker 2] Processing file: .\data\dataset_large\large_26.txt
+[Worker 3] Processing file: .\data\dataset_large\large_27.txt
+[Worker 0] Processing file: .\data\dataset_large\large_28.txt
+[Worker 1] Processing file: .\data\dataset_large\large_29.txt
+[Worker 2] Processing file: .\data\dataset_large\large_3.txt
+[Worker 3] Processing file: .\data\dataset_large\large_30.txt
+[Worker 0] Processing file: .\data\dataset_large\large_4.txt
+[Worker 1] Processing file: .\data\dataset_large\large_5.txt
+[Worker 3] Processing file: .\data\dataset_large\large_6.txt
+[Worker 2] Processing file: .\data\dataset_large\large_7.txt
+[Worker 0] Processing file: .\data\dataset_large\large_8.txt
+[Worker 1] Processing file: .\data\dataset_large\large_9.txt
+[Worker 3] Received stop signal. Files processed: 7
+[Worker 3] Sending aggregated results to coordinator...
+[Worker 3] Process terminated cleanly.
+[Worker 2] Received stop signal. Files processed: 7
+[Worker 2] Sending aggregated results to coordinator...
+[Worker 2] Process terminated cleanly.
+[Worker 0] Received stop signal. Files processed: 8
+[Worker 0] Sending aggregated results to coordinator...
+[Worker 0] Process terminated cleanly.
+[Worker 1] Received stop signal. Files processed: 8
+[Worker 1] Sending aggregated results to coordinator...
+[Worker 1] Process terminated cleanly.
+ Gotowe (Srednia: 11.71s)
+--------------------------------------------------
 
 
-Wersja sekwencyjna: 0.52s
-Wersja sekwencyjna: 0.36s
-Wersja sekwencyjna: 0.42s
+=====================================================================================
+                              RAPORT WYDAJNOSCIOWY
+=====================================================================================
 
-Czas wykonania (2 workery): 0.63s
-Czas wykonania (2 workery): 0.57s
-Czas wykonania (2 workery): 0.62s
+ZBIOR DANYCH: dataset_small
+Czas sekwencyjny (Baseline): 0.39s
+-------------------------------------------------------------------------------------
+Workery  | Czas (s)  | Map (s)   | Reduce (s) | Przyspieszenie | Efektywnosc
+-------------------------------------------------------------------------------------
+1        | 0.66      | 0.56      | 0.0000     | 0.58         x | 58.23%     
+2        | 0.53      | 0.44      | 0.0000     | 0.73         x | 36.39%     
+4        | 0.56      | 0.38      | 0.0003     | 0.69         x | 17.28%     
+=====================================================================================
 
+ZBIOR DANYCH: dataset_medium
+Czas sekwencyjny (Baseline): 6.40s
+-------------------------------------------------------------------------------------
+Workery  | Czas (s)  | Map (s)   | Reduce (s) | Przyspieszenie | Efektywnosc
+-------------------------------------------------------------------------------------
+1        | 7.67      | 7.56      | 0.0000     | 0.83         x | 83.42%     
+2        | 3.90      | 3.74      | 0.0000     | 1.64         x | 82.01%     
+4        | 3.83      | 3.36      | 0.0007     | 1.67         x | 41.76%     
+=====================================================================================
+
+ZBIOR DANYCH: dataset_large
+Czas sekwencyjny (Baseline): 26.13s
+-------------------------------------------------------------------------------------
+Workery  | Czas (s)  | Map (s)   | Reduce (s) | Przyspieszenie | Efektywnosc
+-------------------------------------------------------------------------------------
+1        | 25.46     | 25.36     | 0.0000     | 1.03         x | 102.60%    
+2        | 14.56     | 14.35     | 0.0000     | 1.79         x | 89.73%     
+4        | 11.71     | 11.42     | 0.0007     | 2.23         x | 55.75%     
+=====================================================================================

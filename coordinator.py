@@ -9,78 +9,77 @@ def run_parallel_system(directory_path, num_workers):
     
     if not os.path.exists(directory_path):
         print(f"[Coordinator] Blad: Folder '{directory_path}' nie istnieje.")
-        return
+        return 0, 0, 0
 
-    # Pobranie listy plikow
     files = [os.path.join(directory_path, f) for f in os.listdir(directory_path) if f.endswith('.txt')]
     if not files:
         print("[Coordinator] Brak plikow do przetworzenia.")
-        return
+        return 0, 0, 0
 
-    # Inicjalizacja kolejek (Wariant C)
     task_queue = mp.Queue()
     result_queue = mp.Queue()
 
-    # Start pomiaru czasu (obejmuje narzut na powolywanie procesow)
+    # Start pomiaru calkowitego
     start_time = time.time()
 
-    # Uruchamianie workerow
     processes = []
     for i in range(num_workers):
         p = mp.Process(target=worker_main, args=(i, task_queue, result_queue))
         processes.append(p)
         p.start()
 
-    # Faza Map: Rozsylanie zadan (sciezek do plikow)
+    # ==========================================
+    # FAZA MAP: Rozsylanie zadan i praca workerow
+    # ==========================================
+    map_start = time.time()
+    
     for file_path in files:
         task_queue.put(file_path)
-
-    # Wysylanie syngalu zakonczenia - po jednym dla kazdego workera
     for _ in range(num_workers):
         task_queue.put(None)
 
-    # Faza Reduce: Zbieranie i agregacja wynikow
-    final_counter = Counter()
-    workers_finished = 0
-    
-    while workers_finished < num_workers:
-        result = result_queue.get()
-        worker_id = result["worker_id"]
-        worker_counter = result["counter"]
-        print(f"[Coordinator] Odebrano wyniki od Workera {worker_id}")
+    results_list = []
+    while len(results_list) < num_workers:
+        results_list.append(result_queue.get())
         
-        # Szybka agregacja wynikow czastkowych
-        final_counter.update(worker_counter)
-        workers_finished += 1
+    map_end = time.time()
+    map_time = map_end - map_start
 
-    # Czekanie az wszystkie procesy czysto sie zakoncza (dobra praktyka)
+    # ==========================================
+    # FAZA REDUCE: Agregacja zebranych wynikow
+    # ==========================================
+    reduce_start = time.time()
+    
+    final_counter = Counter()
+    for result in results_list:
+        final_counter.update(result["counter"])
+        print(f"[Coordinator] Zagregowano wyniki od Workera {result['worker_id']}")
+        
+    reduce_end = time.time()
+    reduce_time = reduce_end - reduce_start
+    # ==========================================
+
     for p in processes:
         p.join()
 
-    # Koniec pomiaru czasu
     end_time = time.time()
     execution_time = end_time - start_time
 
-    # Wyswietlanie wynikow
     print("\n=== ANALIZA CZESTOSCI SLOW (SYSTEM ROZPROSZONY) ===")
     print(f"Przetworzono plikow: {len(files)}")
-    print("Top 10 najczestszych slow:")
-    
     top_10 = final_counter.most_common(10)
     for i, (word, count) in enumerate(top_10, 1):
         print(f"{i}. {word}: {count} wystapien")
 
     print("\n=== POMIARY WYDAJNOSCI ===")
-    print(f"Czas wykonania ({num_workers} workery): {execution_time:.2f}s")
+    print(f"Czas calkowity: {execution_time:.2f}s")
+    print(f"Czas fazy Map: {map_time:.2f}s")
+    print(f"Czas fazy Reduce: {reduce_time:.4f}s")
     
-    return execution_time
+    # Zwracamy teraz krotke z trzema wartosciami
+    return execution_time, map_time, reduce_time
 
 if __name__ == '__main__':
-    # Wymagane dla poprawnego dzialania multiprocessing na systemie Windows
     mp.freeze_support()
-    
-    # Sciezka testowa
-    TARGET_DIR = r".\data\dataset_small"
-    
-    # Uruchomienie z 2 workerami (minimalna architektura)
+    TARGET_DIR = r".\data\dataset-small"
     run_parallel_system(TARGET_DIR, num_workers=2)
