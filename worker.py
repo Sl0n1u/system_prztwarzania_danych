@@ -9,7 +9,6 @@ def worker_main(worker_id, task_queue, result_queue):
     while True:
         task = task_queue.get()
         
-        # Check for the poison pill
         if task is None:
             print(f"[Worker {worker_id}] Received stop signal. Files processed: {processed_files}")
             break
@@ -26,7 +25,7 @@ def worker_main(worker_id, task_queue, result_queue):
         except Exception as e:
             print(f"[Worker {worker_id}] Error reading {file_path}: {e}")
 
-    # Map phase complete, sending aggregated result to Reduce phase
+    # Wysyłanie danych do koordynatora
     print(f"[Worker {worker_id}] Sending aggregated results to coordinator...")
     result_queue.put({
         "worker_id": worker_id,

@@ -6,7 +6,6 @@ from utils import clean_text
 def process_directory(directory_path):
     print(f"[Sequential] Starting processing directory: {directory_path}")
     
-    # Weryfikacja, czy folder istnieje
     if not os.path.exists(directory_path):
         print(f"[Sequential] Error: Directory '{directory_path}' does not exist.")
         return
@@ -51,5 +50,5 @@ def process_directory(directory_path):
 
 if __name__ == "__main__":
     
-    TARGET_DIR = r".\data\dataset_small"
+    TARGET_DIR = r".\data\dataset_large"
     process_directory(TARGET_DIR)

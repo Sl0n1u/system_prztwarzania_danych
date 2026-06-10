@@ -28,9 +28,7 @@ def run_parallel_system(directory_path, num_workers):
         processes.append(p)
         p.start()
 
-    # ==========================================
-    # FAZA MAP: Rozsylanie zadan i praca workerow
-    # ==========================================
+    # MAP: Rozsylanie zadan i praca workerow
     map_start = time.time()
     
     for file_path in files:
@@ -45,9 +43,7 @@ def run_parallel_system(directory_path, num_workers):
     map_end = time.time()
     map_time = map_end - map_start
 
-    # ==========================================
-    # FAZA REDUCE: Agregacja zebranych wynikow
-    # ==========================================
+    # REDUCE: Agregacja zebranych wynikow
     reduce_start = time.time()
     
     final_counter = Counter()
@@ -57,7 +53,7 @@ def run_parallel_system(directory_path, num_workers):
         
     reduce_end = time.time()
     reduce_time = reduce_end - reduce_start
-    # ==========================================
+
 
     for p in processes:
         p.join()
@@ -76,10 +72,11 @@ def run_parallel_system(directory_path, num_workers):
     print(f"Czas fazy Map: {map_time:.2f}s")
     print(f"Czas fazy Reduce: {reduce_time:.4f}s")
     
-    # Zwracamy teraz krotke z trzema wartosciami
+    # Zwracamy krotke z trzema wartosciami - benchmark
     return execution_time, map_time, reduce_time
 
 if __name__ == '__main__':
     mp.freeze_support()
-    TARGET_DIR = r".\data\dataset-small"
-    run_parallel_system(TARGET_DIR, num_workers=2)
+    TARGET_DIR = r".\data\dataset_large"
+    WORKER_COUNT = 4
+    run_parallel_system(TARGET_DIR, WORKER_COUNT)

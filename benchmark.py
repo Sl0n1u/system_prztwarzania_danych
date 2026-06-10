@@ -35,7 +35,6 @@ def run_benchmark():
             with contextlib.redirect_stdout(io.StringIO()):
                 t = process_directory(dataset)
             seq_times.append(t)
-            # Drukujemy czas po kazdej iteracji w tej samej linii
             print(f"[{i+1}: {t:.2f}s] ", end="", flush=True)
             
         avg_seq_time = sum(seq_times) / REPETITIONS
@@ -58,7 +57,7 @@ def run_benchmark():
                 par_times.append(t_total)
                 map_times.append(t_map)
                 reduce_times.append(t_reduce)
-                # Drukujemy czas calkowity po kazdej iteracji w tej samej linii
+                # Czas calkowity po kazdej iteracji
                 print(f"[{i+1}: {t_total:.2f}s] ", end="", flush=True)
                 
             avg_par_time = sum(par_times) / REPETITIONS
